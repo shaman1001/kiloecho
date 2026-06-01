@@ -21,7 +21,7 @@ proceed.*
 
 ---
 
-## 1. Core loop — scaffold + config + github wrapper
+## 1. Core loop — scaffold + config + github wrapper ✅ IMPLEMENTED (2026-06-01)
 
 ```
 Build the project skeleton for increment 1: the package directory `kiloecho/`
@@ -36,7 +36,7 @@ show me they pass.
 
 ---
 
-## 2. Core loop — engines
+## 2. Core loop — engines ✅ IMPLEMENTED (2026-06-01)
 
 ```
 Implement `engines.py` per SPEC §9 and the engine specifics in CLAUDE.md:
@@ -51,7 +51,7 @@ Add logic tests for prompt construction and engine selection. Run tests.
 
 ---
 
-## 3. Core loop — orchestrator + CLI
+## 3. Core loop — orchestrator + CLI ✅ IMPLEMENTED (2026-06-01)
 
 ```
 Implement `orchestrator.py` (the tick loop: routing, the two-key build gate,
@@ -69,7 +69,7 @@ needed). Run tests and show the full `ke --help` output.
 
 ---
 
-## 4. Verify increment 1 end to end (dry run)
+## 4. Verify increment 1 end to end (dry run) — READY FOR YOUR TESTING
 
 ```
 With dry_run = true in a sample kiloecho.toml, walk me through exactly what

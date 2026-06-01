@@ -209,6 +209,11 @@ tempCodeRunnerFile.py
 # PyPI configuration file
 .pypirc
 
+# Kilo Echo — never commit the live config (contains repo path, workdir, secrets)
+kiloecho.toml
+ke-runs.jsonl
+costs.jsonl
+
 # Marimo
 marimo/_static/
 marimo/_lsp/
