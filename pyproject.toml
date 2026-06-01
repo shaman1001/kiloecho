@@ -1,0 +1,26 @@
+[project]
+name = "kiloecho"
+version = "0.1.0"
+description = "Drive a local AI coding agent from your phone via GitHub Issues"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+ke = "kiloecho.__main__:main"
+kiloecho = "kiloecho.__main__:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

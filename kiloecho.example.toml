@@ -1,0 +1,30 @@
+# Copy to kiloecho.toml and edit. kiloecho.toml is gitignored.
+
+[kiloecho]
+repo          = "owner/repo"
+workdir       = "~/code/project"     # the git checkout engines operate in
+poll_seconds  = 60
+base_branch   = "main"
+branch_prefix = "ke/"
+default_engine = "aider"
+parallel      = false                # true → worktree-based parallel builds
+dry_run       = false                # log decisions, call no engine, never push
+
+[kiloecho.labels]
+plan="plan"; planned="planned"; build="build"; approved="approved"
+building="building"; done="done"; failed="failed"; revise="revise"; automerge="automerge"
+
+[engines.aider]
+kind  = "aider"
+model = "ollama/qwen2.5-coder:14b"
+
+[engines.claude]
+kind  = "claude"
+
+# pricing fallback only (per 1M tokens); engines self-report when possible
+[pricing.claude]
+input = 3.0
+output = 15.0
+[pricing.aider]
+input = 0.0
+output = 0.0
